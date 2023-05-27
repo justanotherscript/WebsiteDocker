@@ -1,0 +1,14 @@
+version: '3'
+services:
+  caddy:
+    image: caddy:2.1.1-alpine
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./personal-site:/usr/share/caddy
+      - caddy_data:/data
+volumes:
+  caddy_data:
+  # caddy SSL volume
