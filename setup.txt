@@ -6,3 +6,7 @@ docker build -t website .
 # List images
 
 docker images
+
+# Run image in detached mode
+
+docker run -d website
